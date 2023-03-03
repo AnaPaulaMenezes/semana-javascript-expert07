@@ -43,12 +43,12 @@ export default class HandGestureController {
 
             for await (const { event, x, y } of this.#service.detectGestures(hands)) {
                 if (event === 'click') {
-                    if (!clickShouldRun) continue
+                    if (!clickShouldRun()) continue
                     this.#view.clickOnElement(x, y)
                     continue
                 }
                 if (event.includes('scroll')) {
-                    if (!scrollShouldRun) continue
+                    if (!scrollShouldRun()) continue
                     this.#scrollPage(event)
                 }
             }

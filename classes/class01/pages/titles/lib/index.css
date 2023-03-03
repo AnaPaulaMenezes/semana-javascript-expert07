@@ -825,6 +825,17 @@ a {
     color: var(--green);
 }
 
+#hands {
+    /* faz com que elementos possam ser clicavel */
+    pointer-events: none;
+
+    /* faz ficar em cima dos elementos */
+    position: fixed;
+
+    /* fica à frente dos elementos */
+    z-index: 2;
+}
+
 /* END MODAL */
 
 @media screen and (max-width: 1660px) {
